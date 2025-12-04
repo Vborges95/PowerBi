@@ -7,7 +7,15 @@ O objetivo é registrar a evolução dos estudos e consolidar material para revi
 
 ## 📂 Conteúdos do Repositório
 
-### 1. **Apresentação de BI (Power BI Desktop)**
+## 📊 PowerBI1.pptx – Analisando dados de um Dashboard de Vendas no Power BI
+
+Este arquivo contém uma apresentação com visuais de vendas, lucro, produtos e segmentos, analisados no Power BI Desktop.
+
+---
+
+## 🧠 Conceitos estudados
+
+### 1. **Apresentação de BI **
 Baseado no arquivo de estudos fornecido no curso, contendo dashboards e análises visualmente claras e orientadas a decisões. Exemplos contidos no material:  
 - 📦 **Soma de Vendas por Produto**  
 - 💰 **Média de Preço por Produto**  
@@ -16,11 +24,7 @@ Baseado no arquivo de estudos fornecido no curso, contendo dashboards e análise
 - 📈 **Vendas por Ano e Mês**  
 - 🗺️ Mapas de distribuição de vendas e lucro
 
-*(Referência visual: gráficos e dashboards apresentados no arquivo do curso)* :contentReference[oaicite:1]{index=1}
-
----
-
-## 🧠 Conceitos estudados
+*(Referência visual: gráficos e dashboards apresentados no arquivo do curso)* 
 
 ### 🔹 **Processos de Dados – ETL e ELT**
 - Diferenças estruturais  
@@ -57,7 +61,6 @@ Este repositório foi criado para:
 - Registrar todo o conteúdo estudado ao longo do curso  
 - Consolidar conceitos para revisões rápidas  
 - Desenvolver dashboards e análises reprodutíveis  
-- Criar base para um futuro **post no LinkedIn sobre a jornada de BI**  
 - Servir como portfólio técnico utilizando Power BI e SQL Analytics
 
 ---
@@ -68,15 +71,6 @@ Este repositório foi criado para:
 - **Power Query**  
 - **SQL / SQL Analytics**  
 - **Ferramentas Microsoft (Azure, SQL Server, PowerPoint)**  
-
----
-
-## 📈 Próximos Passos
-
-- Adicionar exemplos de queries SQL utilizadas nos exercícios  
-- Criar versões interativas dos dashboards  
-- Expandir análise para cenários reais de negócio  
-- Construir um case completo para portfólio
 
 ---
 
