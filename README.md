@@ -1,56 +1,73 @@
 # 📊 Repositório de Estudos – Business Intelligence com Power BI
 
-Este repositório reúne todo o conteúdo estudado no curso de Business Intelligence utilizando **Power BI Desktop**, incluindo painéis, conceitos, processos analíticos e boas práticas de ETL/ELT.  
-O objetivo é registrar a evolução dos estudos e consolidar material para revisão e utilização futura — inclusive para criação de portfólios e publicações profissionais.
+Este repositório reúne todo o conteúdo estudado no curso de Business Intelligence utilizando Power BI Desktop, incluindo:
+
+- Painéis e apresentações desenvolvidas ao longo das aulas  
+- Um relatório gerencial completo criado como desafio final  
+- Conceitos fundamentais de BI, SQL Analytics e processos ETL/ELT  
+- Práticas de modelagem, navegação, storytelling e visualização de dados  
+
+O objetivo é registrar a evolução dos estudos, consolidar materiais para revisão futura e construir um portfólio profissional de projetos em Power BI.
 
 ---
 
 ## 📂 Conteúdos do Repositório
 
-## 📊 PowerBI1.pptx – Analisando dados de um Dashboard de Vendas no Power BI
+### 📝 **PowerBI1.pptx – Analisando Dados de um Dashboard de Vendas no Power BI**
+Apresentação com visuais iniciais explorando vendas, lucro, produtos, países e segmentos.  
+Este arquivo representa a introdução ao uso do Power BI e à construção de dashboards básicos.
 
-Este arquivo contém uma apresentação com visuais de vendas, lucro, produtos e segmentos, analisados no Power BI Desktop.
+### 🧾 **BI2.pptx – Relatório Gerencial Completo (Desafio Final da Formação)**
+Apresentação contendo o relatório gerencial desenvolvido a partir do dataset *Sample Financials*, incluindo:
+
+- Página principal com KPIs de Vendas, Lucro e Unidades Vendidas  
+- Botões de navegação entre páginas  
+- Segmentadores com ícones e seleção de datas  
+- Bookmarks e botões para alternar visuais sobre o mesmo tema  
+- Gráficos avançados: linha, área, treemap, mapa, barras, pizza  
+- Página analítica de lucro com detalhamento por ano, país, trimestre e segmento  
 
 ---
 
-## 🧠 Conceitos estudados
+## 🧠 Conceitos Estudados
 
-### 1. **Apresentação de BI **
-Baseado no arquivo de estudos fornecido no curso, contendo dashboards e análises visualmente claras e orientadas a decisões. Exemplos contidos no material:  
-- 📦 **Soma de Vendas por Produto**  
-- 💰 **Média de Preço por Produto**  
-- 🌎 **Vendas e Lucro por País**  
-- 🧩 **Lucro por Segmento de Mercado**  
-- 📈 **Vendas por Ano e Mês**  
-- 🗺️ Mapas de distribuição de vendas e lucro
+### 🔹 **Business Intelligence**
+Aprofundamento em dashboards orientados a decisões, incluindo:
 
-*(Referência visual: gráficos e dashboards apresentados no arquivo do curso)* 
+- Soma de Vendas por Produto  
+- Média de Preço  
+- Lucro por Segmento  
+- Vendas por País  
+- Análises temporais (Ano, Mês, Trimestre)  
+- Mapas geográficos  
 
 ### 🔹 **Processos de Dados – ETL e ELT**
-- Diferenças estruturais  
+- Diferenças estruturais e ordem das etapas  
 - Transformação antes e depois do carregamento  
-- Quando usar cada abordagem  
-- Agilidade, manutenção e armazenamento
+- Boas práticas de desempenho, agilidade e manutenção  
 
 ### 🔹 **Análises de Dados**
-- Análise Descritiva  
+- Descritiva  
 - Diagnóstica  
 - Preditiva  
 - Prescritiva  
 
-Com exemplos práticos de categorização, padronização e segmentação de dados no SQL.
+Com exercícios que incluíram categorização, padronização, segmentação e criação de métricas.
 
 ### 🔹 **SQL Analytics**
-- Mindset analítico aplicado ao SQL  
-- Transformações e manipulação para BI  
-- Boas práticas em bancos de produção
+- Mindset analítico para exploração de dados  
+- Transformações via SQL  
+- Boas práticas em bancos de produção (LIMIT, padronização, categorização, etc.)
 
 ### 🔹 **Power BI**
-- Carregamento de dados  
-- Transformações no Power Query  
-- Construção de visuais  
-- Modelagem de dados  
-- Integração com ferramentas Microsoft (PowerPoint, Azure, SQL Server)
+- Carregamento e transformação de dados (Power Query)  
+- Modelagem analítica  
+- Construção de visuais adequados a tendência, magnitude, composição e comparação  
+- Criação de relatórios multi-página  
+- Botões de navegação  
+- Bookmarks e indicadores  
+- Segmentadores avançados  
+- Publicação no Power BI Service  
 
 ---
 
@@ -58,17 +75,18 @@ Com exemplos práticos de categorização, padronização e segmentação de dad
 
 Este repositório foi criado para:
 
-- Registrar todo o conteúdo estudado ao longo do curso  
-- Consolidar conceitos para revisões rápidas  
-- Desenvolver dashboards e análises reprodutíveis  
-- Servir como portfólio técnico utilizando Power BI e SQL Analytics
+- Registrar todo o aprendizado do curso de formação Power BI Analyst  
+- Construir um portfólio sólido com exemplos de dashboards e relatórios profissionais  
+- Desenvolver storytelling com dados e visualização orientada ao negócio  
+- Consolidar conceitos fundamentais de BI, ETL/ELT e SQL Analytics  
 
 ---
 
 ## 🚀 Tecnologias Utilizadas
 
 - **Power BI Desktop**  
-- **Power Query**  
+- **Power Query (M Language)**  
+- **DAX (análises e KPIs)**  
 - **SQL / SQL Analytics**  
 - **Ferramentas Microsoft (Azure, SQL Server, PowerPoint)**  
 
