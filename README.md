@@ -17,7 +17,7 @@ O objetivo é registrar a evolução dos estudos, consolidar materiais para revi
 Apresentação com visuais iniciais explorando vendas, lucro, produtos, países e segmentos.  
 Este arquivo representa a introdução ao uso do Power BI e à construção de dashboards básicos.
 
-### 🧾 **BI2.pptx – Relatório Gerencial Completo (Desafio Final da Formação)**
+### 🧾 **PowerBI2.pptx – Relatório Gerencial Completo**
 Apresentação contendo o relatório gerencial desenvolvido a partir do dataset *Sample Financials*, incluindo:
 
 - Página principal com KPIs de Vendas, Lucro e Unidades Vendidas  
