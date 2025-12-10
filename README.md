@@ -13,12 +13,12 @@ O objetivo é registrar a evolução dos estudos, consolidar materiais para revi
 
 ## 📂 Conteúdos do Repositório
 
-### 📝 **PowerBI1.pptx – Analisando Dados de um Dashboard de Vendas no Power BI**
+### 📝 PowerBI1.pptx – Analisando Dados de um Dashboard de Vendas no Power BI
 Apresentação com visuais iniciais explorando vendas, lucro, produtos, países e segmentos.  
-Este arquivo representa a introdução ao uso do Power BI e à construção de dashboards básicos.
+Representa a introdução ao uso do Power BI e à construção de dashboards básicos.
 
-### 🧾 **PowerBI2.pptx – Relatório Gerencial Completo**
-Apresentação contendo o relatório gerencial desenvolvido a partir do dataset *Sample Financials*, incluindo:
+### 🧾 PowerBI2.pptx – Relatório Gerencial Completo
+Apresentação contendo o relatório desenvolvido a partir do dataset *Sample Financials*, incluindo:
 
 - Página principal com KPIs de Vendas, Lucro e Unidades Vendidas  
 - Botões de navegação entre páginas  
@@ -29,10 +29,51 @@ Apresentação contendo o relatório gerencial desenvolvido a partir do dataset 
 
 ---
 
+## 🧩 Modelagem Dimensional – Star Schema de Vendas
+
+Para dar suporte ao relatório gerencial foi criado um **modelo dimensional (Star Schema)** estruturado para otimizar análises de vendas, lucro e desempenho comercial.
+
+Esse modelo permite:
+
+- Melhor performance nas consultas  
+- Cálculos DAX mais eficientes  
+- Navegação clara entre dimensões e fatos  
+- Análises por tempo, produto, país, região e segmento  
+
+### 📐 Estrutura do Modelo
+
+**Tabela Fato**
+- `fato_vendas` – contém métricas como:  
+  - `unidades_vendidas`  
+  - `valor_venda`  
+  - `custo_produto`  
+  - `lucro`  
+
+**Tabelas Dimensão**
+- `dim_data` – hierarquia de datas (dia, mês, trimestre, ano).  
+- `dim_produto` – nome do produto, categoria e subcategoria.  
+- `dim_pais` – país, código e região.  
+- `dim_segmento` – segmentos de mercado (Government, Enterprise, Small Business etc.).
+
+Essa estrutura suporta análises temporais, geográficas e categóricas de forma otimizada.
+
+### 🗺️ Diagrama do Modelo (EER)
+
+O diagrama abaixo foi gerado no MySQL Workbench para documentar a modelagem utilizada:
+
+![Star Schema](SQL1.png)
+
+### 🧱 Script SQL do Modelo
+
+O repositório também inclui o arquivo com o **esquema SQL completo**, contendo todas as tabelas, chaves primárias, estrangeiras e índices necessários para montar o Star Schema em um banco MySQL.
+
+---
+
 ## 🧠 Conceitos Estudados
 
-### 🔹 **Business Intelligence**
-Aprofundamento em dashboards orientados a decisões, incluindo:
+### 🔹 Business Intelligence
+
+Conceitos fundamentais de BI, com foco em dashboards orientados a decisões:
 
 - Soma de Vendas por Produto  
 - Média de Preço  
@@ -41,31 +82,34 @@ Aprofundamento em dashboards orientados a decisões, incluindo:
 - Análises temporais (Ano, Mês, Trimestre)  
 - Mapas geográficos  
 
-### 🔹 **Processos de Dados – ETL e ELT**
-- Diferenças estruturais e ordem das etapas  
+### 🔹 Processos de Dados – ETL e ELT
+
+- Diferenças estruturais e fluxo de execução  
 - Transformação antes e depois do carregamento  
-- Boas práticas de desempenho, agilidade e manutenção  
+- Boas práticas de desempenho, manutenção e integração  
 
-### 🔹 **Análises de Dados**
-- Descritiva  
-- Diagnóstica  
-- Preditiva  
-- Prescritiva  
+### 🔹 Análises de Dados
 
-Com exercícios que incluíram categorização, padronização, segmentação e criação de métricas.
+- **Descritiva**  
+- **Diagnóstica**  
+- **Preditiva**  
+- **Prescritiva**  
 
-### 🔹 **SQL Analytics**
-- Mindset analítico para exploração de dados  
-- Transformações via SQL  
-- Boas práticas em bancos de produção (LIMIT, padronização, categorização, etc.)
+Incluindo exercícios de categorização, padronização, segmentação e criação de métricas.
 
-### 🔹 **Power BI**
+### 🔹 SQL Analytics
+
+- Mindset analítico aplicado ao SQL  
+- Transformações e manipulação de dados  
+- Boas práticas para consultas em ambiente de produção (LIMIT, padronização etc.)
+
+### 🔹 Power BI
+
 - Carregamento e transformação de dados (Power Query)  
 - Modelagem analítica  
 - Construção de visuais adequados a tendência, magnitude, composição e comparação  
 - Criação de relatórios multi-página  
-- Botões de navegação  
-- Bookmarks e indicadores  
+- Botões de navegação e bookmarks  
 - Segmentadores avançados  
 - Publicação no Power BI Service  
 
@@ -75,26 +119,27 @@ Com exercícios que incluíram categorização, padronização, segmentação e 
 
 Este repositório foi criado para:
 
-- Registrar todo o aprendizado do curso de formação Power BI Analyst  
-- Construir um portfólio sólido com exemplos de dashboards e relatórios profissionais  
+- Registrar todo o aprendizado do curso *Power BI Analyst*  
+- Construir um portfólio sólido com dashboards e relatórios profissionais  
 - Desenvolver storytelling com dados e visualização orientada ao negócio  
-- Consolidar conceitos fundamentais de BI, ETL/ELT e SQL Analytics  
+- Consolidar conceitos fundamentais de BI, ETL/ELT, SQL Analytics e modelagem dimensional  
 
 ---
 
 ## 🚀 Tecnologias Utilizadas
 
-- **Power BI Desktop**  
-- **Power Query (M Language)**  
-- **DAX (análises e KPIs)**  
-- **SQL / SQL Analytics**  
-- **Ferramentas Microsoft (Azure, SQL Server, PowerPoint)**  
+- Power BI Desktop  
+- Power Query (M Language)  
+- DAX  
+- SQL / SQL Analytics  
+- MySQL Workbench  
+- Ferramentas Microsoft (Azure, SQL Server, PowerPoint)
 
 ---
 
 ## 📣 Contribuições
 
-Este repositório é focado em estudos individuais, mas sugestões podem ser enviadas via *issues*.  
+Este repositório é focado em estudos individuais, mas sugestões podem ser enviadas via **Issues**.  
 Feedbacks e recomendações são sempre bem-vindos.
 
 ---
@@ -105,3 +150,11 @@ Feedbacks e recomendações são sempre bem-vindos.
 Analista de Dados | BI | FP&A  
 Apaixonado por transformar dados em decisões inteligentes.
 
+---
+
+## 🔗 Contato
+
+Caso queira trocar ideias sobre BI, FP&A ou modelagem de dados:
+
+- LinkedIn: _adicione seu link aqui_  
+- GitHub: _adicione seu link aqui_  
