@@ -1,160 +1,160 @@
-# 📊 Repositório de Estudos – Business Intelligence com Power BI
+📊 Repositório de Estudos – Business Intelligence com Power BI
 
-Este repositório reúne todo o conteúdo estudado no curso de Business Intelligence utilizando Power BI Desktop, incluindo:
+Este repositório reúne o conteúdo desenvolvido durante o curso Power BI Analyst, incluindo modelagem dimensional, construção de dashboards profissionais, práticas de ETL/ELT, SQL Analytics e criação de relatórios gerenciais.
 
-- Painéis e apresentações desenvolvidas ao longo das aulas  
-- Um relatório gerencial completo criado como desafio final  
-- Conceitos fundamentais de BI, SQL Analytics e processos ETL/ELT  
-- Práticas de modelagem, navegação, storytelling e visualização de dados  
-
-O objetivo é registrar a evolução dos estudos, consolidar materiais para revisão futura e construir um portfólio profissional de projetos em Power BI.
+O objetivo é consolidar o aprendizado, documentar processos técnicos e apresentar entregas diretas para recrutadores e equipes de dados.
 
 ---
 
 ## 📂 Conteúdos do Repositório
 
-### 📝 PowerBI1.pptx – Analisando Dados de um Dashboard de Vendas no Power BI
-Apresentação com visuais iniciais explorando vendas, lucro, produtos, países e segmentos.  
-Representa a introdução ao uso do Power BI e à construção de dashboards básicos.
-
-### 🧾 PowerBI2.pptx – Relatório Gerencial Completo
-Apresentação contendo o relatório desenvolvido a partir do dataset *Sample Financials*, incluindo:
-
-- Página principal com KPIs de Vendas, Lucro e Unidades Vendidas  
-- Botões de navegação entre páginas  
-- Segmentadores com ícones e seleção de datas  
-- Bookmarks e botões para alternar visuais sobre o mesmo tema  
-- Gráficos avançados: linha, área, treemap, mapa, barras, pizza  
-- Página analítica de lucro com detalhamento por ano, país, trimestre e segmento  
+### 📝 **PowerBI1.pptx — Dashboard Inicial de Vendas**
+Análise exploratória contendo:
+- Vendas por produto, país e segmento  
+- Lucro total e por categoria  
+- Mapas geográficos e gráficos comparativos  
+- Primeira estrutura prática de um dashboard analítico  
 
 ---
 
-## 🧩 Modelagem Dimensional – Star Schema de Vendas
-
-Para dar suporte ao relatório gerencial foi criado um **modelo dimensional (Star Schema)** estruturado para otimizar análises de vendas, lucro e desempenho comercial.
-
-Esse modelo permite:
-
-- Melhor performance nas consultas  
-- Cálculos DAX mais eficientes  
-- Navegação clara entre dimensões e fatos  
-- Análises por tempo, produto, país, região e segmento  
-
-### 📐 Estrutura do Modelo
-
-**Tabela Fato**
-- `fato_vendas` – contém métricas como:  
-  - `unidades_vendidas`  
-  - `valor_venda`  
-  - `custo_produto`  
-  - `lucro`  
-
-**Tabelas Dimensão**
-- `dim_data` – hierarquia de datas (dia, mês, trimestre, ano).  
-- `dim_produto` – nome do produto, categoria e subcategoria.  
-- `dim_pais` – país, código e região.  
-- `dim_segmento` – segmentos de mercado (Government, Enterprise, Small Business etc.).
-
-Essa estrutura suporta análises temporais, geográficas e categóricas de forma otimizada.
-
-### 🗺️ Diagrama do Modelo (EER)
-
-O diagrama abaixo foi gerado no MySQL Workbench para documentar a modelagem utilizada:
-
-![Star Schema](SQL1.png)
-
-### 🧱 Script SQL do Modelo
-
-O repositório também inclui o arquivo com o **esquema SQL completo**, contendo todas as tabelas, chaves primárias, estrangeiras e índices necessários para montar o Star Schema em um banco MySQL.
+### 🧾 **PowerBI2.pptx — Relatório Gerencial Completo**
+Relatório multi-páginas com:
+- KPIs principais (Vendas, Lucro, Unidades Vendidas)  
+- Segmentadores com ícones e calendário  
+- Navegação via botões e bookmarks  
+- Gráficos de linha, área, barras, hierarquias e mapa  
+- Página detalhada de análise de Lucro por Ano, País, Trimestre e Segmento  
 
 ---
 
-## 🧠 Conceitos Estudados
+## 🧩 Modelagem Dimensional — Star Schema de Vendas
 
-### 🔹 Business Intelligence
+Para suportar o relatório final, foi construída uma modelagem dimensional completa baseada nas práticas de Kimball.
 
-Conceitos fundamentais de BI, com foco em dashboards orientados a decisões:
+### 🏗️ Estrutura do Modelo
 
-- Soma de Vendas por Produto  
-- Média de Preço  
-- Lucro por Segmento  
-- Vendas por País  
-- Análises temporais (Ano, Mês, Trimestre)  
-- Mapas geográficos  
+### **Tabela Fato — F_Vendas**
+Contém dados observacionais:
+- Units Sold  
+- Sale Price  
+- Discounts  
+- Sales  
+- COGS  
+- Profit  
+- Country, Segment e Product  
+- Data da venda  
+- Chave substituta criada via Power Query  
 
-### 🔹 Processos de Dados – ETL e ELT
-
-- Diferenças estruturais e fluxo de execução  
-- Transformação antes e depois do carregamento  
-- Boas práticas de desempenho, manutenção e integração  
-
-### 🔹 Análises de Dados
-
-- **Descritiva**  
-- **Diagnóstica**  
-- **Preditiva**  
-- **Prescritiva**  
-
-Incluindo exercícios de categorização, padronização, segmentação e criação de métricas.
-
-### 🔹 SQL Analytics
-
-- Mindset analítico aplicado ao SQL  
-- Transformações e manipulação de dados  
-- Boas práticas para consultas em ambiente de produção (LIMIT, padronização etc.)
-
-### 🔹 Power BI
-
-- Carregamento e transformação de dados (Power Query)  
-- Modelagem analítica  
-- Construção de visuais adequados a tendência, magnitude, composição e comparação  
-- Criação de relatórios multi-página  
-- Botões de navegação e bookmarks  
-- Segmentadores avançados  
-- Publicação no Power BI Service  
+### **Tabelas Dimensão**
+- **D_Produtos** – lista única de produtos  
+- **D_Produtos_Detalhes** – agregações (média, mínimo e máximo por produto)  
+- **D_Descontos** – faixas e percentuais de desconto  
+- **D_Calendário** – criada em DAX via `CALENDAR()`  
+- **D_Segmento / D_País** – derivadas dos agrupamentos da fato  
 
 ---
 
-## 🎯 Objetivo do Projeto
+## 🧪 Transformações no Power Query  
+Abaixo está uma das etapas fundamentais do processo de ETL, incluindo geração de colunas condicionais, limpeza de dados, criação do índice de produtos e preparação das tabelas dimensão:
+
+![Transformações no Power Query](PowerBI3.2.png)
+
+---
+
+## 🗺️ Modelo Dimensional Final no Power BI  
+Após criar todas as dimensões no Power Query e estabelecer a granularidade correta, o modelo Star Schema foi estruturado no Power BI Desktop da seguinte forma:
+
+![Modelo Dimensional](PowerBI3.1.png)
+
+---
+
+## 🔧 Processo de Construção do Modelo (Resumo Técnico)
+
+1️⃣ **Transformações no Power Query**
+- Remoção de colunas redundantes  
+- Agrupamentos por Produto  
+- Cálculo de métricas (Média, Máx., Mín.)  
+- Criação da chave substituta (Índice de Produtos)  
+- Geração da dimensão D_Produtos_Detalhes  
+- Padronização de tipos de dados  
+
+2️⃣ **Criação da Tabela Calendário (DAX)**
+
+3️⃣ Modelagem Dimensional
+
+Relacionamentos 1:* entre dimensões e fato
+
+Direcionalidade correta dos filtros
+
+Garantia de granularidade consistente
+
+4️⃣ Construção do Relatório
+
+KPIs com DAX
+
+Bookmarks e navegação
+
+Segmentadores avançados
+
+Páginas temáticas e storytelling visual
+
+🧠 Conceitos Consolidados
+🔹 Business Intelligence
+
+Dashboards orientados a decisões
+
+KPIs e leitura executiva
+
+Storytelling com dados
+
+🔹 ETL / ELT
+
+Transformações no Power Query
+
+Limpeza, normalização e padronização
+
+🔹 SQL Analytics
+
+Estruturação de esquemas relacionais
+
+Manipulação e análise de dados
+
+🔹 Modelagem Dimensional
+
+Star Schema
+
+Chave substituta
+
+Cardinalidade e granularidade
+
+🎯 Objetivo do Projeto
 
 Este repositório foi criado para:
 
-- Registrar todo o aprendizado do curso *Power BI Analyst*  
-- Construir um portfólio sólido com dashboards e relatórios profissionais  
-- Desenvolver storytelling com dados e visualização orientada ao negócio  
-- Consolidar conceitos fundamentais de BI, ETL/ELT, SQL Analytics e modelagem dimensional  
+Demonstrar domínio de Power BI, Power Query, DAX e SQL
 
----
+Apresentar um pipeline completo de dados
 
-## 🚀 Tecnologias Utilizadas
+Consolidar boas práticas de BI e modelagem dimensional
 
-- Power BI Desktop  
-- Power Query (M Language)  
-- DAX  
-- SQL / SQL Analytics  
-- MySQL Workbench  
-- Ferramentas Microsoft (Azure, SQL Server, PowerPoint)
+Servir como portfólio profissional para vagas de BI, FP&A e Data Analytics
 
----
+🚀 Tecnologias Utilizadas
 
-## 📣 Contribuições
+Power BI Desktop
 
-Este repositório é focado em estudos individuais, mas sugestões podem ser enviadas via **Issues**.  
-Feedbacks e recomendações são sempre bem-vindos.
+Power Query (M Language)
 
----
+DAX
 
-## 👤 Autor
+MySQL Workbench
 
-**Vinicius Borges**  
-Analista de Dados | BI | FP&A  
-Apaixonado por transformar dados em decisões inteligentes.
+SQL Analytics
 
----
+Azure / SQL Server / PowerPoint
 
-## 🔗 Contato
+👤 Autor
 
-Caso queira trocar ideias sobre BI, FP&A ou modelagem de dados:
-
-- LinkedIn: _adicione seu link aqui_  
-- GitHub: _adicione seu link aqui_  
+Vinicius Borges
+Analista de Dados | BI | FP&A
+Transformando dados em decisões estratégicas.
