@@ -23,7 +23,20 @@ Relatório multi-páginas com:
 - Segmentadores com ícones e calendário  
 - Navegação via botões e bookmarks  
 - Gráficos de linha, área, barras, hierarquias e mapa  
-- Página detalhada de análise de Lucro por Ano, País, Trimestre e Segmento  
+- Página detalhada de análise de Lucro por Ano, País, Trimestre e Segmento
+
+### 🧾 **PowerBI4.pptx — Dashboard Gerencial para Tomada de Decisão**
+
+Projeto desenvolvido a partir de um desafio prático focado na experiência do usuário e storytelling com dados, aplicando boas práticas de design, performance e análise gerencial.
+
+Principais entregas:
+
+- Relatório de vendas e lucros
+- Uso de segmentadores, botões e navegação entre páginas
+- Análises temporais para identificação de tendências
+- Visualização de exceções e distribuição dos dados
+- Aplicação de indicadores para navegação e apresentação
+- Otimização de performance utilizando Performance Analyzer
 
 ---
 
