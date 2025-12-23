@@ -38,7 +38,7 @@ Principais entregas:
 - Aplicação de indicadores para navegação e apresentação
 - Otimização de performance utilizando Performance Analyzer
 
-###🧾 **PowerBI5.pptx — Dashboard Gerencial com Parâmetros e Storytelling Avançado**
+### 🧾 **PowerBI5.pptx — Dashboard Gerencial com Parâmetros e Storytelling Avançado**
 
 Evolução direta do PowerBI4, este projeto foi desenvolvido a partir de um desafio prático focado em **interatividade, personalização da análise e apresentação orientada ao cliente**, utilizando **Parâmetros de Campos** no Power BI.
 
