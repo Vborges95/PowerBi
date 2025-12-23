@@ -38,6 +38,23 @@ Principais entregas:
 - Aplicação de indicadores para navegação e apresentação
 - Otimização de performance utilizando Performance Analyzer
 
+###🧾 **PowerBI5.pptx — Dashboard Gerencial com Parâmetros e Storytelling Avançado**
+
+Evolução direta do PowerBI4, este projeto foi desenvolvido a partir de um desafio prático focado em **interatividade, personalização da análise e apresentação orientada ao cliente**, utilizando **Parâmetros de Campos** no Power BI.
+
+O objetivo foi permitir que o usuário final explore os dados sob diferentes perspectivas sem duplicação de visuais, reforçando a experiência do usuário e a tomada de decisão.
+
+Principais entregas:
+
+- Criação de **parâmetros baseados em categorias** (ex: Country, Product, Trimestre)
+- Criação de **parâmetros baseados em valores** (ex: Profit, Sales, métricas financeiras)
+- Visuais dinâmicos controlados por parâmetros
+- Página dedicada com **storytelling**, seguindo padrão visual do relatório
+- Navegação intuitiva e layout orientado à apresentação executiva
+- Análise comparativa e identificação de exceções
+- Continuidade da otimização de performance e boas práticas de design
+
+Este relatório foi concebido como uma **página de apresentação ao cliente**, priorizando clareza, consistência visual e leitura executiva dos dados.
 ---
 
 ## 🧩 Modelagem Dimensional — Star Schema de Vendas
