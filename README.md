@@ -1,190 +1,125 @@
-📊 Repositório de Estudos – Business Intelligence com Power BI
+# 📊 Business Intelligence aplicado à análise de performance
 
-Este repositório reúne o conteúdo desenvolvido durante o curso Power BI Analyst, incluindo modelagem dimensional, construção de dashboards profissionais, práticas de ETL/ELT, SQL Analytics e criação de relatórios gerenciais.
+## 📌 Contexto
 
-O objetivo é consolidar o aprendizado, documentar processos técnicos e apresentar entregas diretas para recrutadores e equipes de dados.
+Em muitos cenários, o desafio não é ter dados —  
+é conseguir transformá-los em uma visão clara de performance.
 
----
-
-## 📂 Conteúdos do Repositório
-
-### 📝 **PowerBI1.pptx — Dashboard Inicial de Vendas**
-Análise exploratória contendo:
-- Vendas por produto, país e segmento  
-- Lucro total e por categoria  
-- Mapas geográficos e gráficos comparativos  
-- Primeira estrutura prática de um dashboard analítico  
+Este projeto simula a construção de um ambiente de Business Intelligence voltado para análise de vendas, com foco em organização dos dados, visualização de indicadores e suporte à tomada de decisão.
 
 ---
 
-### 🧾 **PowerBI2.pptx — Relatório Gerencial Completo**
-Relatório multi-páginas com:
-- KPIs principais (Vendas, Lucro, Unidades Vendidas)  
-- Segmentadores com ícones e calendário  
-- Navegação via botões e bookmarks  
-- Gráficos de linha, área, barras, hierarquias e mapa  
-- Página detalhada de análise de Lucro por Ano, País, Trimestre e Segmento
+## 🎯 Objetivo
 
-### 🧾 **PowerBI4.pptx — Dashboard Gerencial para Tomada de Decisão**
+Estruturar um pipeline completo de dados e desenvolver dashboards capazes de:
 
-Projeto desenvolvido a partir de um desafio prático focado na experiência do usuário e storytelling com dados, aplicando boas práticas de design, performance e análise gerencial.
-
-Principais entregas:
-
-- Relatório de vendas e lucros
-- Uso de segmentadores, botões e navegação entre páginas
-- Análises temporais para identificação de tendências
-- Visualização de exceções e distribuição dos dados
-- Aplicação de indicadores para navegação e apresentação
-- Otimização de performance utilizando Performance Analyzer
-
-### 🧾 **PowerBI5.pptx — Dashboard Gerencial com Parâmetros e Storytelling Avançado**
-
-Evolução direta do PowerBI4, este projeto foi desenvolvido a partir de um desafio prático focado em **interatividade, personalização da análise e apresentação orientada ao cliente**, utilizando **Parâmetros de Campos** no Power BI.
-
-O objetivo foi permitir que o usuário final explore os dados sob diferentes perspectivas sem duplicação de visuais, reforçando a experiência do usuário e a tomada de decisão.
-
-Principais entregas:
-
-- Criação de **parâmetros baseados em categorias** (ex: Country, Product, Trimestre)
-- Criação de **parâmetros baseados em valores** (ex: Profit, Sales, métricas financeiras)
-- Visuais dinâmicos controlados por parâmetros
-- Página dedicada com **storytelling**, seguindo padrão visual do relatório
-- Navegação intuitiva e layout orientado à apresentação executiva
-- Análise comparativa e identificação de exceções
-- Continuidade da otimização de performance e boas práticas de design
-
-Este relatório foi concebido como uma **página de apresentação ao cliente**, priorizando clareza, consistência visual e leitura executiva dos dados.
----
-
-## 🧩 Modelagem Dimensional — Star Schema de Vendas
-
-Para suportar o relatório final, foi construída uma modelagem dimensional completa baseada nas práticas de Kimball.
-
-### 🏗️ Estrutura do Modelo
-
-### **Tabela Fato — F_Vendas**
-Contém dados observacionais:
-- Units Sold  
-- Sale Price  
-- Discounts  
-- Sales  
-- COGS  
-- Profit  
-- Country, Segment e Product  
-- Data da venda  
-- Chave substituta criada via Power Query  
-
-### **Tabelas Dimensão**
-- **D_Produtos** – lista única de produtos  
-- **D_Produtos_Detalhes** – agregações (média, mínimo e máximo por produto)  
-- **D_Descontos** – faixas e percentuais de desconto  
-- **D_Calendário** – criada em DAX via `CALENDAR()`  
-- **D_Segmento / D_País** – derivadas dos agrupamentos da fato  
+- Monitorar performance de vendas  
+- Identificar tendências e variações  
+- Analisar lucratividade por diferentes dimensões  
+- Apoiar decisões com base em indicadores  
 
 ---
 
-## 🧪 Transformações no Power Query  
-Abaixo está uma das etapas fundamentais do processo de ETL, incluindo geração de colunas condicionais, limpeza de dados, criação do índice de produtos e preparação das tabelas dimensão:
+## 🧠 Abordagem
 
-![Transformações no Power Query](PowerBI3.2.png)
+A construção do projeto seguiu uma lógica orientada a negócio:
 
----
-
-## 🗺️ Modelo Dimensional Final no Power BI  
-Após criar todas as dimensões no Power Query e estabelecer a granularidade correta, o modelo Star Schema foi estruturado no Power BI Desktop da seguinte forma:
-
-![Modelo Dimensional](PowerBI3.1.png)
+- Tratamento e organização dos dados (Power Query)  
+- Estruturação do modelo dimensional (Star Schema)  
+- Criação de métricas e KPIs com DAX  
+- Desenvolvimento de dashboards com foco em leitura executiva  
+- Aplicação de storytelling para facilitar interpretação  
 
 ---
 
-## 🔧 Processo de Construção do Modelo (Resumo Técnico)
+## 📊 Principais análises
 
-1️⃣ **Transformações no Power Query**
-- Remoção de colunas redundantes  
-- Agrupamentos por Produto  
-- Cálculo de métricas (Média, Máx., Mín.)  
-- Criação da chave substituta (Índice de Produtos)  
-- Geração da dimensão D_Produtos_Detalhes  
-- Padronização de tipos de dados  
+O projeto permite explorar a performance sob diferentes perspectivas:
 
-2️⃣ **Criação da Tabela Calendário (DAX)**
+- Vendas e lucro por produto, país e segmento  
+- Evolução temporal (ano, trimestre, período)  
+- Identificação de padrões e exceções  
+- Comparação entre categorias e regiões  
 
-3️⃣ Modelagem Dimensional
+---
 
-Relacionamentos 1:* entre dimensões e fato
+## 💡 Valor gerado
 
-Direcionalidade correta dos filtros
+A estrutura construída permite:
 
-Garantia de granularidade consistente
+- Visualização clara da performance do negócio  
+- Identificação de tendências e oportunidades  
+- Apoio à tomada de decisão baseada em dados  
+- Melhor comunicação de indicadores para stakeholders  
 
-4️⃣ Construção do Relatório
+---
 
-KPIs com DAX
+## 🧩 Modelagem de dados
 
-Bookmarks e navegação
+Foi construída uma modelagem dimensional baseada em Star Schema, garantindo:
 
-Segmentadores avançados
+- Organização e escalabilidade  
+- Separação entre fatos e dimensões  
+- Melhor performance das análises  
 
-Páginas temáticas e storytelling visual
+### Estrutura principal:
 
-🧠 Conceitos Consolidados
-🔹 Business Intelligence
+- **F_Vendas** → métricas de venda e lucro  
+- **Dimensões** → produto, calendário, país, segmento e descontos  
 
-Dashboards orientados a decisões
+---
 
-KPIs e leitura executiva
+## ⚙️ Construção técnica (visão resumida)
 
-Storytelling com dados
+- Transformações no Power Query (limpeza, padronização, criação de colunas)  
+- Criação de tabela calendário em DAX  
+- Relacionamentos e cardinalidade (1:*)  
+- Desenvolvimento de KPIs e medidas  
+- Uso de bookmarks, segmentadores e navegação  
 
-🔹 ETL / ELT
+---
 
-Transformações no Power Query
+## 📊 Exemplos do modelo
 
-Limpeza, normalização e padronização
+### Transformações no Power Query
+![Transformações](PowerBI3.2.png)
 
-🔹 SQL Analytics
+### Modelo dimensional
+![Modelo](PowerBI3.1.png)
 
-Estruturação de esquemas relacionais
+---
 
-Manipulação e análise de dados
+## 🚀 Evolução dos dashboards
 
-🔹 Modelagem Dimensional
+O projeto foi desenvolvido em etapas:
 
-Star Schema
+- Dashboard inicial exploratório  
+- Relatório gerencial com KPIs e navegação  
+- Dashboard com storytelling e foco em decisão  
+- Versão avançada com parâmetros dinâmicos e personalização  
 
-Chave substituta
+---
 
-Cardinalidade e granularidade
+## 📈 Conclusão
 
-🎯 Objetivo do Projeto
+O projeto demonstra como a combinação de modelagem de dados, visualização e análise pode transformar dados brutos em informações úteis para tomada de decisão.
 
-Este repositório foi criado para:
+Mais do que construir dashboards, o foco está em criar **clareza sobre a performance do negócio**.
 
-Demonstrar domínio de Power BI, Power Query, DAX e SQL
+---
 
-Apresentar um pipeline completo de dados
+## 🛠️ Tecnologias utilizadas
 
-Consolidar boas práticas de BI e modelagem dimensional
+Power BI • Power Query • DAX • SQL  
 
-Servir como portfólio profissional para vagas de BI, FP&A e Data Analytics
+---
 
-🚀 Tecnologias Utilizadas
+## 👤 Sobre mim
 
-Power BI Desktop
+Atuo na interseção entre **finanças, dados e tecnologia**, com foco em análise de performance e apoio à decisão.
 
-Power Query (M Language)
+---
 
-DAX
+## 📌 Observações
 
-MySQL Workbench
-
-SQL Analytics
-
-Azure / SQL Server / PowerPoint
-
-👤 Autor
-
-Vinicius Borges
-Analista de Dados | BI | FP&A
-Transformando dados em decisões estratégicas.
+Projeto desenvolvido para fins de portfólio.
